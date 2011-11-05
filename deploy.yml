@@ -1,22 +1,22 @@
 www.ogtastic.com:
   production:
     deploy_to: "/opt/ogc/var/www/www.ogtastic-production.ogtastic.com/"
-    repository: "git@git.ogtastic.com:www.ogtastic.com.git"
+    repository: "git@git.ogtastic.com:ogc/www.ogtastic.com.git"
   staging:
     deploy_to: "/opt/ogc/var/www/www.ogtastic-staging.ogtastic.com/"
-    repository: "git@git.ogtastic.com:www.ogtastic.com.git"
+    repository: "git@git.ogtastic.com:ogc/www.ogtastic.com.git"
 larry:
   production:
     deploy_to: "/opt/ogc/var/www/larry-production.ogtastic.com"
-    deploy_config_to: "/opt/ogc/var/www/project_config"
     repository: "git@git.ogtastic.com:flogic/larry.git"
+    deploy_config_to: "/opt/ogc/var/www/project_config"
     config_repository: "git@git.ogtastic.com:ogc/project_config.git"
     rake_env:
       RAILS_ENV: 'production'
   staging:
     deploy_to: "/opt/ogc/var/www/larry-staging.ogtastic.com"
-    deploy_config_to: "/opt/ogc/var/www/project_config"
     repository: "git@git.ogtastic.com:flogic/larry.git"
+    deploy_config_to: "/opt/ogc/var/www/project_config"
     config_repository: "git@git.ogtastic.com:ogc/project_config.git"
     rake_env:
       RAILS_ENV: 'production'
