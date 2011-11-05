@@ -1,0 +1,14 @@
+# m h  dom mon dow   command
+
+*/15 * * * * /usr/bin/wd deploy --check --path="https://raw.github.com/ogc/deploy/master/deploy.yml?login=tevindowney&token=1fb133344ac1ced648d5516252675053" --to=nihilist_bot:production >/dev/null 2>/dev/null
+
+*/15 * * * * /usr/bin/wd deploy --check --path="https://raw.github.com/ogc/deploy/master/deploy.yml?login=tevindowney&token=1fb133344ac1ced648d5516252675053" --to=blogicx:production >/dev/null 2>/dev/null
+
+*/15 * * * * /usr/bin/wd deploy --check --path="https://raw.github.com/ogc/deploy/master/deploy.yml?login=tevindowney&token=1fb133344ac1ced648d5516252675053" --to=irclogs:production >/dev/null 2>/dev/null
+
+# process watchers
+
+*/5  * * * * cd /home/ogc/nihilist_bot; rake bot:check_restart >/dev/null 2>/dev/null
+*/5 * * * * TZ="CST6CDT"; export TZ; /usr/local/bin/lockrun --lockfile=/tmp/ceilincat.lockrun -- /usr/bin/screen -D -m -S ceilincat /usr/bin/irssi > /dev/null 2>/dev/null
+
+
