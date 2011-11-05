@@ -9,31 +9,31 @@ larry:
   production:
     deploy_to: "/opt/ogc/var/www/larry-production.ogtastic.com"
     deploy_config_to: "/opt/ogc/var/www/project_config"
-    repository: "git@git.ogtastic.com:larry.git"
-    config_repository: "git@git.ogtastic.com:project_config.git"
+    repository: "git@git.ogtastic.com:flogic/larry.git"
+    config_repository: "git@git.ogtastic.com:ogc/project_config.git"
     rake_env:
       RAILS_ENV: 'production'
   staging:
     deploy_to: "/opt/ogc/var/www/larry-staging.ogtastic.com"
     deploy_config_to: "/opt/ogc/var/www/project_config"
-    repository: "git@git.ogtastic.com:larry.git"
-    config_repository: "git@git.ogtastic.com:project_config.git"
+    repository: "git@git.ogtastic.com:flogic/larry.git"
+    config_repository: "git@git.ogtastic.com:ogc/project_config.git"
     rake_env:
       RAILS_ENV: 'production'
 voldvision:
   production:
     domain: 'ogc@voldvision-production.ogfarm.com'
     deploy_to: '/opt/ogc/var/www/voldvision-production.ogfarm.com'
-    repository: 'git@git.ogtastic.com:voldvision.git'
-    config_repository: 'git@git.ogtastic.com:ogc-config.git'
+    repository: 'git@git.ogtastic.com:ogc/voldvision.git'
+    config_repository: 'git@git.ogtastic.com:ogc/ogc-config.git'
     deploy_config_to: '/opt/ogc/var/www/ogc-config'
     rake_env:
       RAILS_ENV: 'production'
   staging:
     domain: 'ogc@voldvision-staging.ogfarm.com'
     deploy_to: '/opt/ogc/var/www/voldvision-staging.ogfarm.com'
-    repository: 'git@git.ogtastic.com:voldvision.git'
-    config_repository: 'git@git.ogtastic.com:ogc-config.git'
+    repository: 'git@git.ogtastic.com:ogc/voldvision.git'
+    config_repository: 'git@git.ogtastic.com:ogc/ogc-config.git'
     deploy_config_to: '/opt/ogc/var/www/ogc-config'
     rake_env:
       RAILS_ENV: 'production'
