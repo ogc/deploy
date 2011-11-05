@@ -37,3 +37,23 @@ voldvision:
     deploy_config_to: '/opt/ogc/var/www/ogc-config'
     rake_env:
       RAILS_ENV: 'production'
+nihilist_bot:
+  production:
+    deploy_to: "/home/ogc/nihilist_bot"
+    repository: "git@git.ogtastic.com:flogic/nihilist_bot.git"
+    deploy_config_to: "/opt/ogc/var/www/ogc-config"
+    config_repository: "git@git.ogtastic.com:ogc/ogc-config.git"
+blogicx:
+  production:
+    deploy_to: "/opt/ogc/var/www/bl.ogtastic.com/"
+    repository: "git@git.ogtastic.com:ogc/blogicx.git"
+    deploy_config_to: "/opt/ogc/var/www/ogc-config"
+    config_repository: "git@git.ogtastic.com:ogc/ogc-config.git"
+irclogs:
+  prod:
+    domain: "ogc@hoenir.websages.com"
+    deploy_to: "/opt/ogc/var/www/irclogs.ogtastic.com"
+    repository: "git@git.ogtastic.com:flogic/irclogs.git"
+    post_deploy_script: "bin/post_deploy_script.sh"
+    branch: "master"
+
