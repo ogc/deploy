@@ -22,7 +22,6 @@ larry:
       RAILS_ENV: 'production'
 voldvision:
   production:
-    domain: 'ogc@voldvision-production.ogfarm.com'
     deploy_to: '/opt/ogc/var/www/voldvision-production.ogfarm.com'
     repository: 'git@git.ogtastic.com:ogc/voldvision.git'
     config_repository: 'git@git.ogtastic.com:ogc/ogc-config.git'
@@ -30,7 +29,6 @@ voldvision:
     rake_env:
       RAILS_ENV: 'production'
   staging:
-    domain: 'ogc@voldvision-staging.ogfarm.com'
     deploy_to: '/opt/ogc/var/www/voldvision-staging.ogfarm.com'
     repository: 'git@git.ogtastic.com:ogc/voldvision.git'
     config_repository: 'git@git.ogtastic.com:ogc/ogc-config.git'
@@ -51,7 +49,6 @@ blogicx:
     config_repository: "git@git.ogtastic.com:ogc/ogc-config.git"
 irclogs:
   prod:
-    domain: "ogc@hoenir.websages.com"
     deploy_to: "/opt/ogc/var/www/irclogs.ogtastic.com"
     repository: "git@git.ogtastic.com:flogic/irclogs.git"
     post_deploy_script: "bin/post_deploy_script.sh"
