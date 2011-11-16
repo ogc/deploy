@@ -52,4 +52,18 @@ irclogs:
     deploy_to: "/opt/ogc/var/www/irclogs.ogtastic.com"
     repository: "git@git.ogtastic.com:flogic/irclogs.git"
     post_deploy_script: "bin/post_deploy_script.sh"
-
+santorum:
+  staging:
+    deploy_to: "/opt/ogc/var/www/santorum-staging.ogfarm.com/"
+    repository: "git@git.ogtastic.com:ogc/santorum.git"
+    deploy_config_to: "/opt/ogc/var/www/ogc-config"
+    config_repository: "git@git.ogtastic.com:ogc/ogc-config.git"
+    rake_env:
+      RAILS_ENV: 'production'
+  production:
+    deploy_to: "/opt/ogc/var/www/santorum-production.ogfarm.com/"
+    repository: "git@git.ogtastic.com:ogc/santorum.git"
+    deploy_config_to: "/opt/ogc/var/www/ogc-config"
+    config_repository: "git@git.ogtastic.com:ogc/ogc-config.git"
+    rake_env:
+      RAILS_ENV: 'production'
