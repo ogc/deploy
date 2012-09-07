@@ -1,14 +1,14 @@
 # m h  dom mon dow   command
 
-*/15 * * * * /usr/bin/wd deploy --check --path="https://raw.github.com/ogc/deploy/master/deploy.yml?login=tevindowney&token=1fb133344ac1ced648d5516252675053" --to=www.ogtastic.com:production >/dev/null 2>/dev/null
+*/15 * * * * /usr/bin/wd deploy --check --path="https://raw.github.com/ogc/deploy/master/deploy.yml" --to=www.ogtastic.com:production >/dev/null 2>/dev/null
 
-*/15 * * * * /usr/bin/wd deploy --check --path="https://raw.github.com/ogc/deploy/master/deploy.yml?login=tevindowney&token=1fb133344ac1ced648d5516252675053" --to=www.ogtastic.com:staging >/dev/null 2>/dev/null
+*/15 * * * * /usr/bin/wd deploy --check --path="https://raw.github.com/ogc/deploy/master/deploy.yml" --to=www.ogtastic.com:staging >/dev/null 2>/dev/null
 
-*/15 * * * * /usr/bin/wd deploy --check --path="https://raw.github.com/ogc/deploy/master/deploy.yml?login=tevindowney&token=1fb133344ac1ced648d5516252675053" --to=larry:production >/dev/null 2>/dev/null
+*/15 * * * * /usr/bin/wd deploy --check --path="https://raw.github.com/ogc/deploy/master/deploy.yml" --to=larry:production >/dev/null 2>/dev/null
 
-*/15 * * * * /usr/bin/wd deploy --check --path="https://raw.github.com/ogc/deploy/master/deploy.yml?login=tevindowney&token=1fb133344ac1ced648d5516252675053" --to=larry:staging >/dev/null 2>/dev/null
+*/15 * * * * /usr/bin/wd deploy --check --path="https://raw.github.com/ogc/deploy/master/deploy.yml" --to=larry:staging >/dev/null 2>/dev/null
 
-*/15 * * * * /usr/bin/wd deploy --check --path="https://raw.github.com/ogc/deploy/master/deploy.yml?login=tevindowney&token=1fb133344ac1ced648d5516252675053" --to=voldvision:staging >/dev/null 2>/dev/null
+*/15 * * * * /usr/bin/wd deploy --check --path="https://raw.github.com/ogc/deploy/master/deploy.yml" --to=voldvision:staging >/dev/null 2>/dev/null
 
-*/15 * * * * /usr/bin/wd deploy --check --path="https://raw.github.com/ogc/deploy/master/deploy.yml?login=tevindowney&token=1fb133344ac1ced648d5516252675053" --to=voldvision:production >/dev/null 2>/dev/null
+*/15 * * * * /usr/bin/wd deploy --check --path="https://raw.github.com/ogc/deploy/master/deploy.yml" --to=voldvision:production >/dev/null 2>/dev/null
 

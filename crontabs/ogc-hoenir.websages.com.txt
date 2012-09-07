@@ -1,10 +1,10 @@
 # m h  dom mon dow   command
 
-*/15 * * * * /usr/bin/wd deploy --check --path="https://raw.github.com/ogc/deploy/master/deploy.yml?login=tevindowney&token=1fb133344ac1ced648d5516252675053" --to=nihilist_bot:production >/dev/null 2>/dev/null
+*/15 * * * * /usr/bin/wd deploy --check --path="https://raw.github.com/ogc/deploy/master/deploy.yml" --to=nihilist_bot:production >/dev/null 2>/dev/null
 
-*/15 * * * * /usr/bin/wd deploy --check --path="https://raw.github.com/ogc/deploy/master/deploy.yml?login=tevindowney&token=1fb133344ac1ced648d5516252675053" --to=blogicx:production >/dev/null 2>/dev/null
+*/15 * * * * /usr/bin/wd deploy --check --path="https://raw.github.com/ogc/deploy/master/deploy.yml" --to=blogicx:production >/dev/null 2>/dev/null
 
-*/15 * * * * /usr/bin/wd deploy --check --path="https://raw.github.com/ogc/deploy/master/deploy.yml?login=tevindowney&token=1fb133344ac1ced648d5516252675053" --to=irclogs:production >/dev/null 2>/dev/null
+*/15 * * * * /usr/bin/wd deploy --check --path="https://raw.github.com/ogc/deploy/master/deploy.yml" --to=irclogs:production >/dev/null 2>/dev/null
 
 # process watchers
 
