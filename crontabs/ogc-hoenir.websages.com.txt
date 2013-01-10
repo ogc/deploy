@@ -1,14 +1,16 @@
 # m h  dom mon dow   command
 
-*/15 * * * * /usr/bin/wd deploy --check --path="https://raw.github.com/ogc/deploy/master/deploy.yml" --to=nihilist_bot:production >/dev/null 2>/dev/null
-
 */15 * * * * /usr/bin/wd deploy --check --path="https://raw.github.com/ogc/deploy/master/deploy.yml" --to=blogicx:production >/dev/null 2>/dev/null
-
 */15 * * * * /usr/bin/wd deploy --check --path="https://raw.github.com/ogc/deploy/master/deploy.yml" --to=irclogs:production >/dev/null 2>/dev/null
+*/15 * * * * /usr/bin/wd deploy --check --path="https://raw.github.com/ogc/deploy/master/deploy.yml" --to=voldvision:staging >/dev/null 2>/dev/null
+*/15 * * * * /usr/bin/wd deploy --check --path="https://raw.github.com/ogc/deploy/master/deploy.yml" --to=voldvision:production >/dev/null 2>/dev/null
+*/15 * * * * /usr/bin/wd deploy --check --path="https://raw.github.com/ogc/deploy/master/deploy.yml" --to=localpatio:staging >/dev/null 2>/dev/null
+*/15 * * * * /usr/bin/wd deploy --check --path="https://raw.github.com/ogc/deploy/master/deploy.yml" --to=localpatio:production >/dev/null 2>/dev/null
+
+* 2 * * * cd /opt/ogc/var/www/localpatio-production.ogfarm.com; rake backup:db:to_s3 >> log/backup.log
 
 # process watchers
 
-*/5  * * * * cd /home/ogc/nihilist_bot; rake bot:check_restart >/dev/null 2>/dev/null
+# */5  * * * * cd /home/ogc/nihilist_bot; rake bot:check_restart >/dev/null 2>/dev/null
 */5 * * * * TZ="CST6CDT"; export TZ; /usr/local/bin/lockrun --lockfile=/tmp/ceilincat.lockrun -- /usr/bin/screen -D -m -S ceilincat /usr/bin/irssi > /dev/null 2>/dev/null
-
 
