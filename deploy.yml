@@ -35,6 +35,21 @@ voldvision:
     deploy_config_to: '/opt/ogc/var/www/ogc-config'
     rake_env:
       RAILS_ENV: 'production'
+localpatio:
+  production:
+    deploy_to: '/opt/ogc/var/www/localpatio-production.ogfarm.com'
+    repository: 'git@git.ogtastic.com:ogc/voldvision.git'
+    config_repository: 'git@git.ogtastic.com:ogc/ogc-config.git'
+    deploy_config_to: '/opt/ogc/var/www/ogc-config'
+    rake_env:
+      RAILS_ENV: 'production'
+  staging:
+    deploy_to: '/opt/ogc/var/www/localpatio-staging.ogfarm.com'
+    repository: 'git@git.ogtastic.com:ogc/voldvision.git'
+    config_repository: 'git@git.ogtastic.com:ogc/ogc-config.git'
+    deploy_config_to: '/opt/ogc/var/www/ogc-config'
+    rake_env:
+      RAILS_ENV: 'production'
 nihilist_bot:
   production:
     deploy_to: "/home/ogc/nihilist_bot"
